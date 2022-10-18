@@ -13,16 +13,18 @@ public class Search_Number_Array {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num[] = {1,3,5,7,2,4,6,8},location=0;
+        boolean isExist = false;
         System.out.println("Please Enter a number to search : ");
         int userInput;
         try {
             userInput= scanner.nextInt();
             for (int i = 0; i <num.length ; i++) {
                 if(num[i]==userInput){
+                    isExist = true;
                     location=i;
                 }
             }
-            if(location>0){
+            if(isExist){
                 System.out.println("Found in the position "+location);
             }
             else {
